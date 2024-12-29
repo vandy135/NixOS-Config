@@ -1,15 +1,14 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
 users.users.titan = {
      isNormalUser = true;
-     shell = pkgs.zsh;
+     description = "titan";
+     shell = pkgs.fish;
      extraGroups = [ 
      	"wheel" 
-    #    "qemu"
-     #   "kvm"
-      #  "libvirtd"
         "networkmanager"
      ]; 
    };
+   services.logind.extraConfig = "RuntimeDirectorySize=8G";
 }

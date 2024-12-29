@@ -2,21 +2,11 @@
 
 {
    imports = [
-       ./packages.nix
-       ./theme.nix
-       ./nixsettings.nix
-       ./polkit.nix
-       ./users.nix
-       ./fonts.nix
-       ./programs.nix
-       ./internationalisation.nix
-       ./bluetooth.nix
-       ./sound.nix
-       ./time.nix
-       ./home-manager.nix
-       ./graphics.nix
-       ./networking.nix
-       ./boot.nix
-       ./hyprland.nix
-   ];
+	./drivers  #bluetooth, graphics, sounds
+	./hyprland
+	./networking #dhcp/static config	
+	./programs # uwsm, hyprland, zsh
+	./utilities #git, grep, neovim, etc
+	./settings # fonts, users, themes, etc
+];
 }
